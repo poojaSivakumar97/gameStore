@@ -1,4 +1,4 @@
-import { View, Text, Image } from "react-native";
+import { View, Image } from "react-native";
 import React from "react";
 
 const BannerSlider = ({ data }) => {
@@ -6,7 +6,7 @@ const BannerSlider = ({ data }) => {
     <View>
       <Image
         source={data.image}
-        style={{ width: 300, height: 150, borderRadius: 10 }}
+        style={{ height: 150, width: 300, borderRadius: 10 }}
       />
     </View>
   );
