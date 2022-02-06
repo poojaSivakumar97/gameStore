@@ -9,6 +9,7 @@ import MomentsScreen from "../screens/MomentsScreen";
 import SettingsScreen from "../screens/SettingsScreen";
 import CustomDrawer from "../components/CustomDrawer";
 import { color } from "react-native-reanimated";
+import TabNavigator from "./TabNavigator";
 
 const Drawer = createDrawerNavigator();
 
@@ -25,8 +26,8 @@ const AppStack = () => {
       }}
     >
       <Drawer.Screen
-        name="Home"
-        component={Home}
+        name="Home2"
+        component={TabNavigator}
         options={{
           drawerIcon: ({ color }) => (
             <Ionicons name="home-outline" size={18} color={color} />
