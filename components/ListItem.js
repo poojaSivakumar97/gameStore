@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity, StyleSheet, Image } from "react-native";
 import React from "react";
 import { windowWidth } from "../utlis/Dimensions";
 
-const ListItem = ({ data }) => {
+const ListItem = ({ data, onPress }) => {
   return (
     <View style={styles.gameDetails}>
       <View style={{ flexDirection: "row" }}>
@@ -32,6 +32,7 @@ const ListItem = ({ data }) => {
           //   marginVertical: 20,
           //   marginBottom: 20,
         }}
+        onPress={onPress}
       >
         <Text style={{ fontSize: 16, color: "#fff" }}>
           {data.isFree == "Yes" ? "Free" : data.price}
