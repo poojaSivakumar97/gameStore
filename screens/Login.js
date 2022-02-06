@@ -28,7 +28,7 @@ const Login = ({ navigation }) => {
       <TouchableOpacity
         style={styles.buttonContainer}
         activeOpacity={0.5}
-        onPress={() => navigation.navigate("Home")}
+        onPress={() => navigation.navigate("Onboarding")}
       >
         <Text
           style={{
