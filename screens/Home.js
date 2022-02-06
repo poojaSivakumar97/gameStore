@@ -70,11 +70,27 @@ const Home = ({ navigation }) => {
         <View style={{ marginBottom: 30 }}>
           {gamesTab == 1 &&
             freeGames.map((game) => {
-              return <ListItem key={game.id} data={game} />;
+              return (
+                <ListItem
+                  key={game.id}
+                  data={game}
+                  onPress={() =>
+                    navigation.navigate("GameDetails", { title: game.title })
+                  }
+                />
+              );
             })}
           {gamesTab == 2 &&
             paidGames.map((game) => {
-              return <ListItem key={game.id} data={game} />;
+              return (
+                <ListItem
+                  key={game.id}
+                  data={game}
+                  onPress={() =>
+                    navigation.navigate("GameDetails", { title: game.title })
+                  }
+                />
+              );
             })}
         </View>
       </ScrollView>
