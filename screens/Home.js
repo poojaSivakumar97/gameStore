@@ -17,7 +17,7 @@ import BannerSlider from "../components/BannerSlider";
 import CustomSwitch from "../components/CustomSwitch";
 import ListItem from "../components/ListItem";
 
-const Home = () => {
+const Home = ({ navigation }) => {
   const [gamesTab, setGamestab] = useState(1);
   const renderBanner = ({ item, index }) => {
     return <BannerSlider data={item} />;
@@ -32,7 +32,7 @@ const Home = () => {
           <Text style={{ fontSize: 22, color: "#20315f", fontWeight: "bold" }}>
             Hello Joey!
           </Text>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={navigation.openDrawer}>
             <Image
               source={require("../assets/images/user-profile.jpg")}
               style={{ height: 35, width: 35, borderRadius: 25 }}
